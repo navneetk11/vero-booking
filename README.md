@@ -15,7 +15,7 @@
 ![Patient Details](public/screenshots/details.png)
 
 ### Booking Request 
-![Booking Request](public/screenshots/done.png)
+![Booking Request](public/screenshots/Done.png)
 
 ### Admin dashboard
 ![Admin dashboard](public/screenshots/admin-dashboard.png)
