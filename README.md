@@ -1,17 +1,20 @@
-# VeroBook — Patient Booking Flow
+# 🩺 VeroBook — Patient Booking Flow
 
-Live demo: https://vero-booking-iota.vercel.app
+## 🌐 Live demo
+> **Hosted URL:** https://vero-booking-iota.vercel.app
 
-## How to run locally
+## 🚀 How to run locally
 
-clone the repo then run:
+Clone the repo then run:
 
+```bash
 npm install
 npm run dev
+```
 
-open http://localhost:3000
+Open http://localhost:3000
 
-## What I built
+## 🏗️ What I built
 
 A patient-facing appointment booking flow and a physician admin dashboard built with Next.js and JavaScript.
 
@@ -24,7 +27,7 @@ Features:
 - Pre-loaded mock data so the app never feels empty on first load
 - Mobile responsive
 
-## Key technical and product decisions
+## ⚙️ Key technical and product decisions
 
 - Used Next.js App Router for file-based routing — patient and admin views are cleanly separated at the route level
 - React Context in layout.js as the shared data layer — bookings made on the patient side appear instantly in the admin view without a database or API call
@@ -34,7 +37,7 @@ Features:
 - Mock data pre-loaded with realistic patients, doctors, and urgency levels so reviewers see a real product feel immediately
 - No database by design — the brief said mock data was fine, and keeping state in memory keeps the setup lightweight and fast to run
 
-## What I would improve with more time
+## 🔮 What I would improve with more time
 
 - Real database (Supabase or PostgreSQL) so bookings persist across sessions and page refreshes
 - Authentication — patients log in, doctors see only their own bookings
