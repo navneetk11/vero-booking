@@ -3,6 +3,22 @@
 ## 🌐 Live demo
 > **Hosted URL:** https://vero-booking-iota.vercel.app
 
+## 📸 Screenshots
+
+### Patient booking flow
+![Patient flow](public/screenshots/patient-flow.png)
+
+### AI symptom triage
+![AI triage](public/screenshots/ai-triage.png)
+
+### Patient Details
+![Patient Details](public/screenshots/details.png)
+
+### Booking Request 
+![Booking Request](public/screenshots/done.png)
+
+### Admin dashboard
+![Admin dashboard](public/screenshots/admin-dashboard.png)
 ## 🚀 How to run locally
 
 Clone the repo then run:
