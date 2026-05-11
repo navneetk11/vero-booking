@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# VeroBook — Patient Booking Flow
 
-## Getting Started
+Live demo: https://vero-booking-iota.vercel.app
 
-First, run the development server:
+## How to run locally
 
-```bash
+clone the repo then run:
+
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+open http://localhost:3000
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## What I built
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+A patient-facing appointment booking flow and a physician admin dashboard built with Next.js and JavaScript.
 
-## Learn More
+Features:
+- Step-by-step patient booking flow — choose physician, select time slot, fill in details
+- AI symptom triage — analyzes symptoms and suggests urgency level instantly
+- Physician admin dashboard — view all bookings, filter by status, confirm or cancel
+- Booking statuses: pending, confirmed, cancelled
+- Shared state across patient and admin views using React Context
+- Pre-loaded mock data so the app never feels empty on first load
+- Mobile responsive
 
-To learn more about Next.js, take a look at the following resources:
+## Key technical and product decisions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Used Next.js App Router for file-based routing — patient and admin views are cleanly separated at the route level
+- React Context in layout.js as the shared data layer — bookings made on the patient side appear instantly in the admin view without a database or API call
+- Reusable components: DoctorCard, SlotPicker, StatusBadge — kept pages focused on logic, components focused on UI
+- AI triage uses keyword matching instead of an external API — instant response, no latency, no cost, works offline, good enough for this scope
+- Used Next.js Link instead of anchor tags for client-side navigation — preserves shared state across page transitions
+- Mock data pre-loaded with realistic patients, doctors, and urgency levels so reviewers see a real product feel immediately
+- No database by design — the brief said mock data was fine, and keeping state in memory keeps the setup lightweight and fast to run
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## What I would improve with more time
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Real database (Supabase or PostgreSQL) so bookings persist across sessions and page refreshes
+- Authentication — patients log in, doctors see only their own bookings
+- Calendar integration so time slots reflect actual physician availability
+- Email or SMS confirmation when a booking is confirmed
+- Replace keyword triage with a real LLM call for smarter, more nuanced symptom understanding
+- Search, sort, and date filtering on the admin dashboard
+- Unit tests for the booking flow and urgency logic
